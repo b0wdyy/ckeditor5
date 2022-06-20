@@ -16,6 +16,8 @@ import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
+import ImageResizeEditing from "@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting"
+import ImageResizeHandles from "@ckeditor/ckeditor5-image/src/imageresize/imageresizehandles"
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
@@ -31,7 +33,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase {
+}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -50,6 +53,8 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResizeEditing,
+	ImageResizeHandles,
 	Indent,
 	Link,
 	List,
@@ -91,7 +96,22 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:side',
 			'|',
 			'toggleImageCaption',
-			'imageTextAlternative'
+			'imageTextAlternative',
+			'resizeImage'
+		],
+		resizeOptions: [
+			{
+				name: 'resizeImage:original',
+				value: null
+			},
+			{
+				name: 'resizeImage:50',
+				value: '50'
+			},
+			{
+				name: 'resizeImage:75',
+				value: '75'
+			}
 		]
 	},
 	table: {

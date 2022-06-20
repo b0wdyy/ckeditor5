@@ -1,7 +1,7 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
+  "name": "@b0wdyy/ckeditor5-build-classic-image-resize",
   "version": "34.1.0",
-  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
+  "description": "CKEditor5 classic with image resizing",
   "keywords": [
     "ckeditor5-build",
     "ckeditor",
